@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/washweswoosh/frontend/libraries/bootstrap/css/bootstrap.css">
+    <!--My Css-->
+    <link rel="stylesheet" href="/washweswoosh/frontend/style/main.css">
+
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- CALENDAR -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.css" />
+
+
+    <title>BOOKING PAGE</title>
+  </head>
+  <link rel="icon" type="image/x-icon" href="/washweswoosh/frontend/img/favicon.png">
+  <body>
+<!--Header-->
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <img src="/washweswoosh/frontend/img/logo-header.png" >
+            </div>
+            <div class="col-8">
+            <div class="topnav" style="text-align: right">
+                <a class="active" href="#home">Beranda</a>
+                <a href="#categories">Jasa</a>
+                <a href="#promo">Cek Booking</a>
+                <a href="#about">Tentang</a>
+                <a href="#masuk"><button class="button-masuk">Masuk</button></a>
+                <a href="#daftar"><button class="button-daftar">Daftar</button></a>
+            </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--TUTUP Header-->
+
+<!--JUDUL HALAMAN-->
+<div class="judul-halaman">
+    Halaman Booking
+</div>
+<!--TUTUP JUDUL HALAMAN-->
+
+
+<!--PILIH JENIS KENDARAAN-->
+<section class="pilih-jenis-kendaraan">
+    <div class="container">
+        <div class="judul-section">
+            <h2>Pilih <b>Jenis Kendaraan</b></h2>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="jenis-kendaraan">
+                    <img src="/washweswoosh/frontend/img/mobil-kecil.png" id="gambar1">
+                    <div class="content">
+                        Mobil kecil <br> (hatchback atau city car)
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="jenis-kendaraan">
+                    <img src="/washweswoosh/frontend/img/mobil-sedan.png" id="gambar2">
+                    <div class="content">
+                        Mobil sedang <br> (sedan car)
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="jenis-kendaraan">
+                    <img src="/washweswoosh/frontend/img/mobil-suv.png"  id="gambar3">
+                    <div class="content">
+                        Mobil besar <br> (suv atau van car)
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="jenis-kendaraan">
+                    <img src="/washweswoosh/frontend/img/motor-kecil.png" id="gambar4">
+                    <div class="content">
+                        Motor kecil <br> (matik atau motor bebek)
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="jenis-kendaraan">
+                    <img src="/washweswoosh/frontend/img/motor-sport.png" id="gambar5">
+                    <div class="content">
+                        Mobil sport <br> (motor sport diatas 250cc)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--TUTUP PILIH JENIS KENDARAAN-->
+
+
+<!--PILIH LOKASI-->
+<section class="pilih-lokasi">
+    <div class="container">
+        <div class="judul-section">
+            <h2>Pilih <b>Lokasi </b></h2>
+        </div>
+        <div class="row">
+            <div style="text-align: center;" class="lokasi-gambar" id="img-lokasi">
+                <div class="row" >
+                    <div class="col"><img src="/washweswoosh/frontend/img/lokasi-1.png" class="unselected" onclick="resetImages(); this.className='selected'" id="lokasi-1">
+                        <div class="content">
+                            Jl. Soekaeno-Hatta, Air Hitam, Pekanbaru (Depan Alfamart)
+                        </div>
+                    </div>
+                    <div class="col"><img src="/washweswoosh/frontend/img/lokasi-2.png" class="unselected" onclick="resetImages(); this.className='selected'" id="lokasi-2">
+                        <div class="content">
+                            Jl. HR Soebrantas, Tampan, Pekanbaru (Depan Indomaret)
+                        </div>
+                    </div>
+                    <div class="col"><img src="/washweswoosh/frontend/img/lokasi-3.png" class="unselected" onclick="resetImages(); this.className='selected'" id="lokasi-3">
+                        <div class="content">
+                            Jl. Kaharuddin Nasution, Maharata, Marpoyan (Depan Uir)
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--TUTUP PILIH LOKASI-->
+
+<!--PILIH LOKASI-->
+<section class="pilih-layanan">
+    <div class="container">
+        <div class="judul-section">
+            <h2>Pilih <b>Layanan </b></h2>
+        </div>
+        <div class="row">
+            <div style="text-align: center;" class="layanan-gambar" id="img-layanan">
+                <div class="row" >
+                    <div class="col"><img src="/washweswoosh/frontend/img/pelayanan-1.png" class="unselected" onclick="resetImages2(); this.className='selected'" id="layanan-1">
+                        <div class="content">
+                            Cuci Motor
+                        </div>
+                    </div>
+                    <div class="col"><img src="/washweswoosh/frontend/img/pelayanan-2.png" class="unselected" onclick="resetImages2(); this.className='selected'"  id="layanan-2">
+                        <div class="content">
+                            Cuci Mobil
+                        </div>
+                    </div>
+                    <div class="col"><img src="/washweswoosh/frontend/img/pelayanan-3.png" class="unselected" onclick="resetImages2(); this.className='selected'"  id="layanan-3">
+                        <div class="content">
+                            Detailing Motor
+                        </div>
+                    </div>
+                    <div class="col"><img src="/washweswoosh/frontend/img/pelayanan-4.png" class="unselected" onclick="resetImages2(); this.className='selected'" id="layanan-4">
+                        <div class="content">
+                            Detailing Mobil
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+            </div>
+        </div>
+        <div class="row">
+<!--PENCUCIAN-->
+            <div class="col">
+                <div class="content-paket-layanan">
+                    <h5>Platinum</h5>
+                    <p>Pembersihan interior dan eksterior premium kami untuk kendaraan yang membutuhkan perhatian ekstra: Pembersihan & pengkondisian dasbor. Lap jabs pintu & boot.</p>
+                    <button onclick="addBorder(this)">Pilih</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="content-paket-layanan">
+                    <h5>Star</h5>
+                    <p>Pencucian eksterior dan vakum interior tikar dan footwell untuk pelanggan yang rutin mencuci mobilnya</p>
+                    <button onclick="addBorder(this)">Pilih</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="content-paket-layanan">
+                    <h5>Ekspress</h5>
+                    <p>Pembersihan eksterior dasar kami untuk pelanggan yang secara teratur mencuci kendaraan mereka.</p>
+                    <button onclick="addBorder(this)">Pilih</button>
+                </div>
+            </div>
+<!--DETAILING-->
+            <div class="col">
+                <div class="content-paket-layanan">
+                    <h5>Eksterior Detail</h5>
+                    <p>Pembersihan exterior mulai dari body, roda, mesin bawah dan goresan-goresan lainnya</p>
+                    <button onclick="addBorder(this)">Pilih</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="content-paket-layanan">
+                    <h5>Interior Detail</h5>
+                    <p>perhatian detail interior termasuk: pembersihan kursi dan perawatan pengkondisian serta penghilangan noda dan goresan kaca.</p>
+                    <button onclick="addBorder(this)">Pilih</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="content-paket-layanan">
+                    <h5>Full Detail</h5>
+                    <p>Layanan detail lengkap yang lengkap, dengan perawatan perlindungan cat tambahan yang memberikan perlindungan tak tertandingi terhadap elemen yang keras.</p>
+                    <button onclick="addBorder(this)">Pilih</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--TUTUP PILIH LOKASI-->
+
+<!--PILIH LOKASI-->
+<section class="pilih-waktu-tanggal">
+    <div class="container">
+        <div class="judul-section">
+            <h2>Pilih <b>Waktu dan Tanggal </b></h2>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id="calendar"></div>
+            </div>
+            <div class="col" style="text-align: center;">
+                <label for="selectedDate">Tanggal yang dipilih</label> <br>
+                <input type="text" id="selectedDate" readonly>
+                <br> <br>
+                <label for="selectedtime">Waktu yang dipilih</label> <br>
+                <input type="time" min="08:00"  max="16:00" id="selectedtime">
+                <br> <br>
+                
+            </div>
+            <div class="col">
+                <h5>Pemberitahuan mengenai waktu dan tanggal</h5>
+                <ol>
+                    <li>
+                        waktu dalam proses pengerjaan untuk pencucian adalah 30 menit
+                    </li>
+                    <li>
+                        Waktu untuk proses detailing berkisar 45 menit hingga 1 jam
+                    </li>
+                    <li>
+                        Pada akhir pekan biasanya terdapat antrian pada waktu tertentu
+                    </li>
+                    <li>
+                        Bookingan anda akan dibatalkan jika tidak ada konfirmasi melalui telepon maksimal 5 menit sebelum waktu yang anda telah buat
+                    </li>
+                </ol>
+                <br> <br>
+                <a href="/washweswoosh/pages/user-information.html"><input type="submit" id="submit-waktu-tanggal" style="text-decoration:none ; color:black;"></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--TUTUP PILIH LOKASI-->
+
+<!--FOOTER-->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <img src="/washweswoosh/frontend/img/logo-footer.png" alt="logo-footer">
+            </div>
+            <div class="col-1"></div>
+            <div class="col-2">
+                <h5>Tentang kami</h5>  <br>
+                <p>FAQs</p>
+                <p>Karir</p>
+                <p>Mitra</p>
+                <p>Lokasi</p>
+                <p>Pusat Bantuan</p>
+            </div>
+            <div class="col-2">
+                <h5>Pelayanan</h5> <br>
+                <p>Wash Service</p>
+                <p>Detailing Service</p>
+                <p>Ubah Booking</p>
+                <p>Voucher</p>
+                <p>Woosh Point</p>
+                <p>Kontak kami</p>
+            </div>
+            <div class="col-2">
+                <h5>Ikuti Kami</h5> <br>
+                <img src="/washweswoosh/frontend/img/instagram.png">
+                <img src="/washweswoosh/frontend/img/twitter.png">
+                <img src="/washweswoosh/frontend/img/facebook.png">
+            </div>
+            <div class="col-2">
+                <h5>Payment Partner</h5> <br>
+                <div class="partner-bayar">
+                    <img src="/washweswoosh/frontend/img/gopay.png">
+                    <img src="/washweswoosh/frontend/img/dana.png">
+                </div>
+            </div>
+        </div>
+    </div>
+            <div class="footer-2">
+            <div class="container">    
+        <div class="row">
+            <div class="col-2">
+                <p>
+                    Terms and Condition 
+                </p>
+            </div>
+            <div class="col-2">
+                <p>
+                    Privacy Policy 
+                </p>
+            </div>
+            <div class="col-3">
+            </div>
+            <div class="col-5">
+                <p>
+                    Web design & development by <span style="color:#EDE520 ;">Rizki Maulana Effendi</span>  
+                </p>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+
+
+</footer>
+<!--TUTUP FOOTER-->
+
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="/washweswoosh/frontend/libraries/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="calendar.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+
+
+    <!--SELECT GAMBAR-->
+    <script>
+    // ambil elemen gambar1
+    var gambar1 = document.getElementById('gambar1');
+    // tambahkan event listener pada elemen gambar1
+    gambar1.addEventListener('click', function() {
+    // hapus atribut style pada elemen gambar2, gambar3, gambar4, dan gambar5
+    document.getElementById('gambar2').style.border = '';
+    document.getElementById('gambar3').style.border = '';
+    document.getElementById('gambar4').style.border = '';
+    document.getElementById('gambar5').style.border = '';
+    // hapus kelas "selected" pada elemen gambar2, gambar3, gambar4, dan gambar5
+    document.getElementById('gambar2').classList.remove('selected');
+    document.getElementById('gambar3').classList.remove('selected');
+    document.getElementById('gambar4').classList.remove('selected');
+    document.getElementById('gambar5').classList.remove('selected');
+    // tambahkan atribut style pada elemen gambar1
+    gambar1.style.border = 'solid 2px red';
+    // tambahkan kelas "selected" pada elemen gambar1
+    gambar1.classList.add('selected');
+    });
+
+    // lakukan hal yang sama untuk elemen gambar2, gambar3, gambar4, dan gambar5
+    var gambar2 = document.getElementById('gambar2');
+        gambar2.addEventListener('click', function() {
+        document.getElementById('gambar1').style.border = '';
+        document.getElementById('gambar3').style.border = '';
+        document.getElementById('gambar4').style.border = '';
+        document.getElementById('gambar5').style.border = '';
+        document.getElementById('gambar1').classList.remove('selected');
+        document.getElementById('gambar3').classList.remove('selected');
+        document.getElementById('gambar4').classList.remove('selected');
+        document.getElementById('gambar5').classList.remove('selected');
+        gambar2.style.border = 'solid 2px red';
+        gambar2.classList.add('selected');
+        });
+    var gambar3 = document.getElementById('gambar3');
+        gambar3.addEventListener('click', function() {
+        document.getElementById('gambar1').style.border = '';
+        document.getElementById('gambar2').style.border = '';
+        document.getElementById('gambar4').style.border = '';
+        document.getElementById('gambar5').style.border = '';
+        document.getElementById('gambar1').classList.remove('selected');
+        document.getElementById('gambar2').classList.remove('selected');
+        document.getElementById('gambar4').classList.remove('selected');
+        document.getElementById('gambar5').classList.remove('selected');
+        gambar3.style.border = 'solid 2px red';
+        gambar3.classList.add('selected');
+        });
+
+    var gambar4 = document.getElementById('gambar4');
+        gambar4.addEventListener('click', function() {
+        document.getElementById('gambar1').style.border = '';
+        document.getElementById('gambar2').style.border = '';
+        document.getElementById('gambar3').style.border = '';
+        document.getElementById('gambar5').style.border = '';
+        document.getElementById('gambar1').classList.remove('selected');
+        document.getElementById('gambar2').classList.remove('selected');
+        document.getElementById('gambar3').classList.remove('selected');
+        document.getElementById('gambar5').classList.remove('selected');
+        gambar4.style.border = 'solid 2px red';
+        gambar4.classList.add('selected');
+        });
+
+    var gambar5 = document.getElementById('gambar5');
+        gambar5.addEventListener('click', function() {
+        document.getElementById('gambar1').style.border = '';
+        document.getElementById('gambar2').style.border = '';
+        document.getElementById('gambar3').style.border = '';
+        document.getElementById('gambar4').style.border = '';
+        document.getElementById('gambar1').classList.remove('selected');
+        document.getElementById('gambar2').classList.remove('selected');
+        document.getElementById('gambar3').classList.remove('selected');
+        document.getElementById('gambar4').classList.remove('selected');
+        gambar5.style.border = 'solid 2px red';
+        gambar5.classList.add('selected');
+        });
+    </script>
+
+    <script>
+    function resetImages() {
+      var image1 = document.getElementById('lokasi-1');
+      var image2 = document.getElementById('lokasi-2');
+      var image3 = document.getElementById('lokasi-3');
+  
+      image1.className = 'unselected';
+      image2.className = 'unselected';
+      image3.className = 'unselected';
+    }
+    </script>
+    <!--SELECT GAMBAR-->
+
+    <!--SELECT GAMBAR-->
+    <script>
+    function resetImages2 () {
+      var layanan1 = document.getElementById('layanan-1');
+      var layanan2 = document.getElementById('layanan-2');
+      var layanan3 = document.getElementById('layanan-3');
+      var layanan4 = document.getElementById('layanan-4');
+  
+      layanan1.className = 'unselected';
+      layanan2.className = 'unselected';
+      layanan3.className = 'unselected';
+      layanan4.className = 'unselected';
+    }
+    </script>
+    <!--SELECT GAMBAR-->
+
+    <!--CALENDAR-->
+    <script>
+    $(document).ready(function() {
+      // page is now ready, initialize the calendar...
+      $('#calendar').fullCalendar({
+        // put your options and callbacks here
+        selectable: true,
+        select: function(start, end) {
+          var selectedDate = moment(start).format('YYYY-MM-DD');
+          $('#selectedDate').val(selectedDate);
+        }
+      })
+    });
+    </script>
+    <!--TUTUP CALENDAR-->
+
+
+    <!--SELECT DIV BUTTON-->
+    <script>
+        let selectedDiv;
+        
+        function addBorder(button) {
+          const div = button.parentElement;
+          if (selectedDiv) {
+            selectedDiv.style.border = "";
+          }
+          if (div.style.border) {
+            div.style.border = "";
+          } else {
+            div.style.border = "3px solid red";
+          }
+          selectedDiv = div;
+        }
+    </script>
+    <!--TUTUP SELECT DIV BUTTON-->
+
+  </body>
+</html>
