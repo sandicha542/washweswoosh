@@ -39,7 +39,7 @@
 
 /*HERO SECTION*/
 .hero {
-    background-image: url(/washweswoosh/frontend/img/hero.png);
+    background-image: url(washweswoosh/frontend/img/hero.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 747px;
